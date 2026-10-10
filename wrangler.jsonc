@@ -1,0 +1,17 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "zevgram",
+  "main": "src/worker.js",
+  "compatibility_date": "2026-10-11",
+  "send_metrics": false,
+  "workers_dev": true,
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "run_worker_first": ["/api/*"]
+  },
+  "d1_databases": [
+    { "binding": "DB", "database_name": "zevgram-db" }
+  ]
+}
+
