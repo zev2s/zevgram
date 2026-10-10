@@ -10,7 +10,7 @@ const fromHex = value => new Uint8Array((value.match(/.{1,2}/g) || []).map(x => 
 
 async function passwordHash(password, salt) {
   const key = await crypto.subtle.importKey('raw', encoder.encode(password), 'PBKDF2', false, ['deriveBits']);
-  return hex(await crypto.subtle.deriveBits({ name: 'PBKDF2', hash: 'SHA-256', salt: fromHex(salt), iterations: 160000 }, key, 256));
+  return hex(await crypto.subtle.deriveBits({ name: 'PBKDF2', hash: 'SHA-256', salt: fromHex(salt), iterations: 100000 }, key, 256));
 }
 async function tokenHash(token) { return hex(await crypto.subtle.digest('SHA-256', encoder.encode(token))); }
 async function sessionUser(request, env) {
