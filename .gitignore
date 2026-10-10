@@ -1,0 +1,15 @@
+zevgram-users.json
+zevgram-posts.json
+zevgram-social.json
+*.tmp
+.env
+.dev.vars
+node_modules/
+.wrangler/
+.npm-cache/
+.local-config/
+worker-configuration.d.ts
+*.log
+.DS_Store
+Thumbs.db
+
