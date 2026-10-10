@@ -2,7 +2,7 @@
   "$schema": "./node_modules/wrangler/config-schema.json",
   "name": "zevgram",
   "main": "src/worker.js",
-  "compatibility_date": "2026-10-11",
+  "compatibility_date": "2026-10-10",
   "send_metrics": false,
   "workers_dev": true,
   "assets": {
